@@ -530,9 +530,10 @@ $grande: uppercase;
     .main {
       height: 3100px;
 
-      .mainPromo {
-        height: 3200px;
-      }
+    }
+
+    .mainPromo {
+      height: 3200px;
     }
 
     .tituloTo {
@@ -592,10 +593,12 @@ $grande: uppercase;
         width: 60vw;
         height: 20vh;
     }
-    
+    .next {
+      padding: 3px 2px;
+    }
     .next img {
         width: 20px;
-        height: 20px;
+        height: 14px;
     }
     .form-control {
       width: 100%; }

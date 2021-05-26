@@ -383,8 +383,8 @@ label {
     grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8"; }
   .main {
     height: 3100px; }
-    .main .mainPromo {
-      height: 3200px; }
+  .mainPromo {
+    height: 3200px; }
   .tituloTo {
     font-size: 1.6rem; } }
 
@@ -419,9 +419,11 @@ label {
   .libre-box img {
     width: 60vw;
     height: 20vh; }
+  .next {
+    padding: 3px 2px; }
   .next img {
     width: 20px;
-    height: 20px; }
+    height: 14px; }
   .form-control {
     width: 100%; }
   .tituloIndex {
