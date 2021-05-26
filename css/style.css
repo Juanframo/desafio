@@ -302,7 +302,8 @@ label {
   font-family: 'National2Condensed-Bold';
   font-size: 2.6rem;
   color: #ef8d30;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.1; }
 
 .tituloTi {
   grid-column: 6 / 10;
@@ -315,7 +316,8 @@ label {
   font-family: 'National2Condensed-Bold';
   font-size: 2.3rem;
   color: #ef8d30;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.1; }
 
 @media only screen and (max-width: 1200px) {
   .sectionMain {
@@ -428,9 +430,9 @@ label {
     width: 100%; }
   .tituloIndex {
     font-family: 'National2Condensed-Bold';
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     color: #ef8d30; }
   .tituloTo {
-    font-size: 1.4rem; }
+    font-size: 1.2rem; }
   #piePagina div img {
     margin-left: 20px; } }
