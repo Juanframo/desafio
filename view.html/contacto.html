@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Dinastia burguer</title>
-    <meta name="description" content="hamburguesas-comida-pepitos">
-    <meta name="keywords" content="Venta-Comida-Rapida-Pollos-Comida-Rapida-Hamburguesas-Funsion">
+    <meta name="description" content="Somos una empresa de comida rapida donde trabajamos para ti">
+    <meta name="keywords" content="Html, Css, Scss, Node">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="shortcut icon" type="../imagenes/logo2.png" href="../imagenes/logo2.png">
+    <link rel="shortcut icon" type="../imagenes/logo1.png" href="../imagenes/logo1.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
@@ -17,30 +17,40 @@
 
 </head>
 <body> 
-    <header class="header">
-        
-        <div class="header__color">
-            <img src="../imagenes/Mesa de trabajo 1 copia.png" alt="mi logo">
-        </div>
+  <header >
 
-        <nav id="navBar"  class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="../imagenes/Mesa de trabajo 1 copia.png" class="img-fluid"  alt="imagen-logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" href="./menu.html">Menu<span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="./promociones.html">Promociones</a>
-            <a class="nav-link" href="./galeria.html">Galeria</a>
-            <a class="nav-link" href="./contacto.html">Contacto</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./promociones.html">Promociones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./galeria.html">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+
+          </ul>
         </div>
-      </nav> 
+      </nav>
     
-       
-    </header>
+</header>
 
     <main class="mainform">
 
@@ -68,8 +78,11 @@
                   </div>
 
                   <div class="col">
-                    <label for="phone">Telefono</label>
-                    <input type="number" id="phone" class="form-control" placeholder="">
+                    <label for="telNo">Telefono (xxx-xxx-xxx): </label>
+                    <input id="telNo" name="telNo" type="tel" required class="form-control"
+                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+                      <span class="validity"></span>
+                    
                   </div>
                 </div>
 
@@ -109,7 +122,7 @@
             <img src="../imagenes/fondos/1x/Mesa de trabajo 1.png" class="what" alt="icono">
         </div>
         <div>
-            <img src="../imagenes/fondos/tarjeta-mastercard.png" alt="icono">
+            <img src="../imagenes/fondos/tarjeta-de-credito (3).png" alt="icono">
         </div>
     
         <div>

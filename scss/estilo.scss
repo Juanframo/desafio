@@ -3,6 +3,9 @@ $negro: black;
 $blanco: white;
 $estilo: grid;
 $tipo: 'Sarabun', sans-serif;
+$medio: center;
+$flex: flex;
+$grande: uppercase;
 
 
 
@@ -12,88 +15,46 @@ $tipo: 'Sarabun', sans-serif;
   
   html {
     background-color: $blanco; }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: rgb(239, 141, 48);
+  }
   
-  .header {
-    margin: 0;
-    height: 200px;
-    display: $estilo;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 100%;
-    grid-template-areas: "img nav";
-
-    &__color {
-      background-color: $negro;
-      width: $ancho;
-      height: 130px; }
-
-    &__color img {
-        width: 140px;
-        margin-left: 40px;
-        transition: 5s,  5s;
-        animation-duration: 5s;
-        animation-name: aparecer; }
-
-    &__color img:hover {
-          width: 170px; }
+  .bg-light {
+      background-color: $negro !important;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+      color: $blanco;
+  }
+   
+  .navbar-toggler {
+      background-color: $blanco;
       
   }
   
-  #navBar {
-    height: 130px;
-    background-color: $negro!important; }
+  .navbar-nav {
+      font-size: 1.4rem;
+      margin-right: 100px;
+  }
   
-  .navbar-toggler {
-    background-color: $blanco; }
+  .ml-auto {
+      margin-left: auto !important;
+  }
   
-  #navBar .navbar-brand {
-    color: $blanco; }
-  
-  #navBar .navbar-nav a {
-    color: $blanco; }
-  
-  .page-link {
-    color: $negro; }
-  
-  .pagination .page-item {
-    margin: 200px 0 0 0; }
-  
-  .sectionco{
-      display: $estilo;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: $ancho;
-      grid-template-areas: "articulo imagen";
+  .img-fluid {
+      margin-right: 40px;
+      height: 100px;
       
-    
-  
-    &__ticle {
-      text-align: center;
-      font-family: 'Sarabun', sans-serif; }
-
-    &__parrafo {
-      text-transform: none;
-      line-height: 1.5;
-      word-spacing: 2px;
-      font-size: 200%;
-      color: $negro;
-      display: inline-flex;
-      letter-spacing: 0.5px; }
-
-      &__imagen {
-        width: 70%;
-        height: 80%;
-        animation-duration: 5s;
-        animation-name: aparecer;
-        margin-left: 68px;  }
-      
-      }
+  }
+   
   p {
     text-transform: none;
-    line-height: 1.5;
-    word-spacing: 2px;
-    font-size: 200%;
+    
+    font-size: 150%;
     color: $negro;
     display: inline-flex; }
-  
+
   @keyframes aparecer {
     0% {
       opacity: 0; }
@@ -102,21 +63,44 @@ $tipo: 'Sarabun', sans-serif;
   
   .mainform {
     display: flex;
-    justify-content: center;
+    justify-content: $medio;
   
     &__set {
       flex-flow: column;
       color:  $negro;
-      font-family: 'Sarabun', sans-serif;
+      font-family: $tipo;
       font-size: 200%;
       display: inline-flex;
       margin-top: 20px;
       gap: 10px; }
 
     &__setdiv {
-        justify-content: center;
-        display: flex; }
+        justify-content: $medio;
+        display: flex;
+        text-transform: $grande; }
+
+        
     
+  }
+
+  
+  input + span {
+    padding-right: 30px;
+  }
+  
+  input:invalid+span:after {
+    position: absolute; content: '✖';
+    padding-left: 3px;
+    color: #8b0000;
+    font-size: 50%;
+  }
+  
+  input:valid+span:after {
+    position: absolute;
+    content: '✓';
+    padding-left: 3px;
+    color: #009000;
+    font-size: 50%;
   }
   
   label {
@@ -126,167 +110,106 @@ $tipo: 'Sarabun', sans-serif;
     width: 40%;
     height: 40%;
     flex-direction: row; }
-  
-  .menuUnoSection {
-    display: $estilo;
-    height: 1800px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    grid-template-areas: "foto1 foto2"
-   "foto3 foto4"
-   "foto5 foto6"
-   "foto7 foto8"
-   "foto9 foto10";
-    max-width: 100%;
-    max-height: 100%;
-    gap: 10px 10px; }
-  
-  .menuUnoSection img {
-    width: 40%;
-    height: 50%; }
-  
-  .menuUnoSection div {
-    text-align: center; }
-  
-  .menuUnoSection p {
-    display: block;
-    font-family: 'Sarabun', sans-serif;
-    font-size: 20px;
-    color: white; }
-  
-  .menuUnoSection div .precio {
-    margin: 20px 0 0 0; }
-  
-  .menuUnoSection .precio span {
-    background-color:  $negro;
-    border-radius: 5px; }
-  
-  .menuUnoSection img:hover {
-    background-color:  $negro;
-    border-radius: 15px; }
 
-    .setDiv {
+
+  // inicio de estilos del menu y promociones
+
+    .main {
+      height: 1100px;
+    }
+
+
+    .sectionMain {
+      display: $estilo;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: 30% 30% 30%;
+      grid-template-areas: 
+                        "foto1  foto2 foto3"
+                        "foto4  foto5 foto6"
+                        "foto7  foto8 foto7";
+      height: auto;
+      width: $ancho;
+      gap: 60px;  
+      margin: 50px 0 0 0;              
+     }
+     
+     .sectionMain .menuDiv{
+     
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         height: 320px;
+     }
+     
+     .sectionMain .menuDiv .card {
+         box-shadow: 0 0 15px 0;
+         align-items: center;
+         font-family: 'Sarabun', sans-serif;
+         width: 18rem;
+         
+     }
+     
+     .card-title {
+         text-transform: uppercase;
+         
+     }
+     
+     .card-img-top {
+         width: 70% !important;
+         height: 200px;
+     }
+     
+
+  .setDiv {
       justify-content: center;
-      display: flex; }
+      display: flex;
+      text-transform: uppercase;
+      margin-top: 45px;
+      text-align: center;
+      margin-right: 0;
+      width: 90%;
+     }
+
+     .mainPromo {
+      height: 1300px;
+    }
     
   
-  main .sectionPromo {
-    display: grid;
-    height: 1200px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas: "image1 image2 "
-   "image3 image4 "
-   "image5 image6 " 
-   "image7 image8 ";
-    max-width: 100%;
-    max-height: 100%;
-    gap: 10px; }
-  
-  .sectionPromo div {
-    text-align: center; }
-  
-  .sectionPromo img {
-    width: 40%;
-    height: 60%; }
-  
-  .sectionPromo img:hover {
-    background-color:  $negro;
-    border-radius: 15px;
-     }
-  
-  .sectionPromo p {
-    display: block;
-    font-family: 'Sarabun', sans-serif;
-    font-size: 20px;
-    color: white; }
-  
-  .sectionPromo div .compe {
-    margin-left: 0;
-    margin-top: 10px; }
-  
-  .sectionPromo .compe span {
-    background-color:  $negro;
-    border-radius: 5px; }
-  
-  .mainviimg {
-    width: 100%;
-    height: 1151px; }
-  
-  .mainviimg__sectione {
-    display: grid;
-    grid-template-columns: 49% 49%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "image image"
-   "card card";
-    max-width: $ancho;
-    max-height: $ancho; }
-  
-  .mainviimg__sectione #carouselExampleControls {
-    width: $ancho; }
-  
-  .mainviimg__divi {
-    width: 50%;
-    align-items: center; }
-  
-  .mainviimg__img {
-    width: 200px !important;
-    height: $ancho;
-    margin: 20px 0 0 50px;
-    text-align: center; }
-  
-  #carouselExampleSlidesOnly {
-    margin-bottom: 50px;
-    width: 200px; }
-  
-  .galery {
-    display: flex;
-    justify-content: center;
-    height: 50px; }
-  
-  .galery__titulo {
-    font-size: 25px;
-    font-family: "Sarabun", sans-serif;
-    margin-left: 50px; }
-  
-  .carUno {
-    width: $ancho;
-    height: $ancho;
-    display: flex;
-    justify-content: center;
-    text-align: center; }
-  
-  .card-title {
-    font-family: "Sarabun", sans-serif;
-    font-size: 30px;
-    width: $ancho; }
-  
   .btn-primary   {
-  color: white;
-  background-color: black;
-  border-color: black;
-  font-family: "Sarabun", sans-serif;
+  color: $blanco;
+  background-color: $negro;
+  border-color: $negro;
+  font-family: $tipo;
   }
-  
+
+  .btn-primary:hover {
+    background-color: #ef8d30;
+    border-color: #ef8d30;
+  }
+  // final de estilos menu y promociones
+
+  // Inicio de estilos del footer
+
+
   #piePagina {
-    display: grid;
-    grid-template-columns: 13% 10%  10% 24% 43%;
+    display: $estilo;
+    grid-template-columns: 13% 10%  10% 10% 43%;
     grid-template-rows: $ancho;
     grid-template-areas: "icono icono titulo icono icono";
     height: 120px;
-    border: 3px solid #080000;
+    border: 3px solid $negro;
     align-items: center;
     gap: 15px;
     background-color: $negro; }
   
   #piePagina h2 {
-    color: white;
+    color: $blanco;
     font-style: italic;
-    text-align: center;
+    text-align: $medio;
     font-size: 200%; }
   
   #piePagina div img {
-    align-content: center;
+    align-content: $medio;
     width: 30px; }
   
   #piePagina .face {
@@ -294,77 +217,268 @@ $tipo: 'Sarabun', sans-serif;
   
   #piePagina .folog {
     width: 120px;
-    margin-left: 65%; }
+    margin-left: 85%; }
   
   #piePagina .what {
     width: 38px; }
+
+    // final de los estilos footer
+
+    // inicio de los estilos de la galeria
   
-  @media only screen and (max-width: 1050px) {
+    .titulo__galeria {
+      font-weight: 400;
+      text-align: $medio;
+      padding: 20px 0;
+      font-size: 40px;
+      text-transform: $grande;
+  }
+  
+  .linea {
+      background: #ef8d30;
+      height: 5px;
+      width: $ancho;
+      display: block;
+  }
+  
+  .galeria {
+    display: $estilo;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    width: 95%;
+    margin: auto;
+    gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+   text-transform: $grande;
+}
+
+.galeria  a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px #040404;
+}
+
+.galeria a:hover img{
+  filter: blur(1px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+.galeria img {
+ width: $ancho;
+ vertical-align: top;
+ height: 300px;
+ object-fit: cover;
+ transition: transform 0.5s;
+}
+
+.libre-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #020202b3;
+  transition: transform .03s ease-in-out;
+  width: $ancho;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: $medio;
+  align-items: $medio;
+  transform: scale(0);
+}
+
+.libre-box img {
+  width: 40vw;
+  height: 50vh;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #851919;
+  color: #fff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+  
+}
+
+.libre-box:target {
+  transform: scale(1);
+}
+
+.next {
+  display: block;
+  background: #851919;
+  color: #fff;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  text-align: $medio;
+}
+
+.next img {
+  width: 20px;
+  height: 20px;
+}
+
+// final de los estilos de la galeria
+
+// inicio de los estilos del home 
+.bodyMain {
+  background: black;
+}
+.indexMain {
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.indexMain .index{
+  display: $estilo;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+  height: 100vh;
+ 
+}
+
+.indexDiv {
+  grid-column: 1 / 11;
+  grid-row: 1 / 10;
+}
+
+.indexMain img {
+
+  width: $ancho;
+  height: 100vh;
+ 
+
+}
+
+.indexButton {
+
+  grid-column: 1 / 6;
+  display: $estilo;
+   justify-content: $medio;
+  align-content: $medio; 
+  grid-row: 1 / 4;
+}
+
+#buttonIndex {
+  color: $blanco;
+  background-color: #ef8d30;
+  border-color: #ef8d30;
+  
+
+}
+
+#buttonIndex:hover {
+  background-color: #ff0000;
+  border-color: #fa0000;
+}
+
+.titulo {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  text-align: $medio;
+  align-items: $medio;
+  display: $estilo;
+}
+.tituloIndex {
+  font-family: 'National2Condensed-Bold';
+  font-size: 2.6rem;
+  color: #ef8d30;
+  text-transform: $grande;
+}
+
+.tituloTi {
+  grid-column: 6 / 10;
+  grid-row: 2 / 3;
+  text-align: $medio;
+  align-items: $medio;
+  display: $estilo;
+
+}
+
+.tituloTo {
+  font-family: 'National2Condensed-Bold';
+  font-size: 2.3rem;
+  color: #ef8d30;
+  text-transform: $grande;
+  
+}
+
+// final de estilos del home
+
+
+    @media only screen and (max-width: 1200px) {
+
+      .sectionMain {
+          
+          grid-template-columns: 42% 42%;
+          grid-template-rows: 25% 25% 25% 25%;
+          grid-template-areas: 
+                                 "foto1  foto2"
+                                 "foto3  foto4"
+                                 "foto5  foto6"
+                                 "foto7  foto8"; }
+
+    .main {
+        height: 1700px;
+                                }
+                                
+   .mainPromo {
+        height: 1300px;
+                                }
+  }
+ 
+ 
+  
+  @media only screen and (max-width: 800px) {
+    .main {
+      height: 1500px;
+    }
+
+    .mainPromo {
+      height: 1700px;
+    }
+
     #piePagina .folog {
-      width: 120px;
-      margin-left: 50%; } }
-  
-  @media only screen and (max-width: 1040px) {
-    .header__color {
-      background-color: $negro;
-      margin-left: 0;
-      height: 200px; }
-    #headerCont {
-      height: 250px; }
-    #headerCont:hover {
-      height: 260px;
-      background-color: $negro; }
-    #navBar {
-      height: 200px;
-      background-color: $negro !important; }
-    .mainMenuUno {
-      margin: 50px 0 0 0;
-      height: 1800px; }
-    .header__color img {
-      margin: 0 0 0 0;
-      width: 140px; }
-    #piePagina .folog {
-      width: 40%;
-      margin-left: 40%; }
-    .sectionPromo div {
-      margin-top: 20px; } }
-  
-  @media only screen and (max-width: 700px) {
-    .mainviimg {
-      width: 100%;
-      height: 100%; }
-    .mainviimg__sectione {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 12% 12% 38% 33%;
-      grid-template-areas: "image"
-   "image"
-   "card"
-   "card";
-      max-width: 100%;
-      max-height: 100%; }
-    .card {
-      border: none; }
-    .galery {
-      display: flex;
-      justify-content: center;
-      height: 50px; }
-    .galery__titulo {
-      font-size: 25px;
-      font-family: $tipo;
-      margin-left: 0;
-      gap: 10px; }
+     
+      margin-left: 50%; }
+
+      .sectionMain .menuDiv .card {
+           
+        width: 15rem;
+        
+    }
+    
+     .sectionMain .menuDiv {
+       height: 300px;
+     }
+
+     .card-img-top {
+       width: 65% !important;
+       height: 180px;
+     }
+
+     .setDiv {
+       width: 100%;
+       margin-right: 0;
+     }
+    
     .carUno {
       width: $ancho;
       height: $ancho;
       display: flex;
-      justify-content: center;
-      text-align: center;
+      justify-content: $medio;
+      text-align: $medio;
       gap: 10px; }
-    .card-title {
-      font-family: $tipo;
-      font-size: 30px;
-      width: $ancho; }
+   
     .btn-primary {
       color: #fff;
       background-color: $negro;
@@ -374,117 +488,131 @@ $tipo: 'Sarabun', sans-serif;
       display: block; }
     .form-control {
       width: 150%; } }
+
+      #buttonIndex {
+        color: white;
+        background-color: #ef8d30;
+        border-color: #ef8d30;
   
+        
+      
+      }
+      
+      #buttonIndex:hover {
+        background-color: #ff0000;
+        border-color: #fa0000;
+      }
+
+      .tituloIndex {
+        font-size: 2.1rem;
+        }
+
+      .tituloTo {
+        font-size: 1.8rem;
+        }
+  
+
+   @media only screen and (max-width: 600px) {
+      .sectionMain {
+          grid-template-columns: 100%;
+          grid-template-rows: 12% 12% 12% 12% 12% 12% 12% 12%;
+          grid-template-areas: 
+                                   "foto1"
+                                   "foto2"
+                                   "foto3"
+                                   "foto4"
+                                   "foto5"
+                                   "foto6"
+                                   "foto7"
+                                   "foto8";
+    }
+
+    .main {
+      height: 3100px;
+
+      .mainPromo {
+        height: 3200px;
+      }
+    }
+
+    .tituloTo {
+      font-size: 1.6rem;
+      }
+
+}
+
+
   @media only screen and (max-width: 480px) {
     body {
       background-color: $blanco;
       line-height: 1; }
-    .header {
-      margin: 0;
-      height: 200px;
-      display: $estilo;
-      grid-template-columns: 30% 70%;
-      grid-template-rows: 100%;
-      grid-template-areas: "image  Menu";
-      background-color: black; }
+
+     
+
+      .setDiv h1 {
+
+        font-size: 2rem;
+      }
+
+      .card-title {
+        font-size: 1.18rem;
+      }
+   
     p {
       margin-top: 50px; }
-    .header:hover {
-      height: 200px; }
-    .header__color {
-      width: $ancho;
-      height: $ancho;
-      display: flex;
-      justify-content: start;
-      align-items: flex-start; }
-    .header__color img {
-      width: $ancho;
-      margin-left: 0;
-      margin-top: 0;
-      margin-bottom: 30px;
-     }
-
-    .header__color img:hover {
-        width: $ancho; }
-
+  
     #piePagina {
       display: $estilo;
       grid-template-columns: 15% 15%  15% 15% 15%;
       grid-template-rows: 100%;
       grid-template-areas: "icono icono titulo icono icono"; }
     #piePagina .face {
-      margin-left: 0;
-      align-items: center; }
+      align-items: $medio;
+      margin-left: 20px; }
+
     #piePagina .folog {
       width: 170%;
       margin-left: 0; }
-    .sectionco {
-      height: 900px;
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 50%;
-      grid-template-areas: "articulo"
-   "imagen";
-      gap: 20px;
-      align-items: center; }
-    .sectionco .divi {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    .sectionco__imagen {
-      margin-left: 0; }
-    .mainMenuUno {
-      height: 2800px; }
-    .menuUnoSection {
-      display: $estilo;
-      height: $ancho;
-      grid-template-columns: 100%;
-      grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-      grid-template-areas: "foto1" 
-   "foto2"
-   "foto3" 
-   "foto4"
-   "foto5" 
-   "foto6"
-   "foto7" 
-   "foto8"
-   "foto9" 
-   "foto10";
-      margin-top: 50px; }
-    .menuUnoSection img {
-      width: 40%;
-      height: 40%;
-      margin: 0 0 0 0; }
-    .menuUnoSection p {
-      text-align: center;
-      margin: 0 0 0 0;
-      font-family: 'Sarabun', sans-serif;
-      font-size: 16px; }
-    main .sectionPromo {
-      display: grid;
-      height: 1500px;
-      grid-template-columns: 100%;
-      grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11%;
-      grid-template-areas: "image1" 
-   "image2 "
-   "image3" 
-   "image4 "
-   "image5" 
-   "image6 " 
-   "image7" 
-   "image8 "; }
-    .sectionPromo div {
-      margin-top: 20px; }
-    .sectionPromo img {
-      width: 50%;
-      height: 60%;
-      margin: 0 0 0 0; }
-    .sectionPromo p {
-      margin: 0 0 0 0;
-      font-family: 'Sarabun', sans-serif;
-      font-size: 16px; }
-    .sectionPromo div .compe {
-      margin-left: 0; }
+
+
+      .inicioMain {
+        height: 600px;
+      }
+
+      .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .libre-box img {
+        width: 60vw;
+        height: 20vh;
+    }
+    
+    .next img {
+        width: 20px;
+        height: 20px;
+    }
     .form-control {
-      width: 100%; } }
+      width: 100%; }
+    
+     
+      .tituloIndex {
+        font-family: 'National2Condensed-Bold';
+        font-size: 1.9rem;
+        color: #ef8d30;
+      }
+
+      .tituloTo {
+        font-size: 1.4rem;
+        }
+
+        #piePagina div img {
+          margin-left: 20px; }
+
+    }
   

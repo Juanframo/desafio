@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Dinastia burguer</title>
-    <meta name="description" content="hamburguesas-comida-pepitos">
-    <meta name="keywords" content="Venta-Comida-Rapida-Pollos-Comida-Rapida-Hamburguesas-Funsion">
+    <meta name="description" content="Somos una empresa de comida rapida donde trabajamos para ti">
+    <meta name="keywords" content="Html, Css, Scss, Node">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="shortcut icon" type="../imagenes/logo2.png" href="../imagenes/logo2.png">
+    <link rel="shortcut icon" type="../imagenes/logo1.png" href="../imagenes/logo1.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
@@ -18,32 +18,42 @@
 </head>
 
 <body>
-    <header id="headerCont" class="header" >
+    <header >
 
         
-        <div class="header__color">
-            <img src="../imagenes/Mesa de trabajo 1 copia.png" alt="mi logo">
-        </div>
-
-        <nav id="navBar"  class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="../index.html">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><img src="../imagenes/Mesa de trabajo 1 copia.png" class="img-fluid"  alt="imagen-logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active" href="./menu.html">Menu<span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="./promociones.html">Promociones</a>
-                <a class="nav-link" href="./galeria.html">Galeria</a>
-                <a class="nav-link" href="./contacto.html">Contacto</a>
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-              </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <!-- <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./menu.html">Menú</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./promociones.html">Promociones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                  </li>
+    
+              </ul>
             </div>
-          </nav> 
+          </nav>
         
     </header>
 
-    <main>
+    <main class="main mainPromo">
 
         <div class="setDiv ">
 
@@ -52,79 +62,100 @@
     
         </div>
 
-        <section class="sectionPromo">
-            
-           
-        
-            <div>
-                <img src="../imagenes/combos/promo5.png" class="imgPromo" alt="hamburguesas promocion">
-
-                <p class="compe"><span>Combo 1</span></p>
-                <p class="compe"><span> Precio= 18/s </span></p>
-
-            </div>
-            <div>
-                <img src="../imagenes/combos/promo6.png" class="imgPromoUno" alt="hamburguesa con combo">
-                
-                <p class="compe"><span>Combo 2</span></p>
-                <p class="compe"><span> Precio= 20/s </span></p>
-                
-
-            </div>
-            <div>
-                <img src="../imagenes/combos/promo2.png" class="imgPromoUno" alt=" hamburguesa Duo">
-                
-                <p class="compe"><span>Combo 3</span></p>
-                <p class="compe"><span> Precio= 25/s </span></p>
-                
-
-            </div>
-            <div>
-                <img src="../imagenes/combos/promo1.png" class="imgPromoUno" alt="hamburguesa">
-                
-                <p class="compe"><span>Combo 4</span></p>
-                <p class="compe"><span> Precio= 35/s </span></p>
+        <section class="sectionMain">
+         
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo4.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">La dinastia promo</h5>
               
-
-           </div>
-            <div>
-                <img src="../imagenes/combos/promo3.png" class="imgPromoUno" alt="hamburguesa">
-                
-                <p class="compe"><span>Combo 5</span></p>
-                <p class="compe"><span> Precio= 40/s </span></p>
-                
-
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde = 20/s</a>
             </div>
-            <div>
-                <img src="../imagenes/combos/promo4.png" alt="imagen de hamburguesa">
-                
-                
-                <p class="compe"><span>Combo 6</span></p>
-                <p class="compe"><span> Precio= 45/s </span></p>
-               
+          </div>
+         </div>
 
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo1.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">fusion promo</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 22/s</a>
             </div>
-            <div>
-                <img src="../imagenes/combos/promo7.png" alt="imagen de shawarma">
-                
-                <p class="compe"><span>Combo 7</span></p>
-                <p class="compe"><span> Precio= 20/s </span></p>
-               
+          </div>
+         </div>
 
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo2x1.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">2 x 1</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 25/s</a>
             </div>
-            <div>
-                <img src="../imagenes/combos/promo8.png" alt="imagen de shawarma">
-                
-                <p class="compe"><span>Combo 8</span></p>
-                <p class="compe"><span> Precio= 20/s </span></p>
-               
+          </div>
+         </div>
 
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo6.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">Pollo promo</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 24/s</a>
             </div>
-            
+          </div>
+         </div>
+
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo7.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">Gusto doble promo</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 35/s</a>
+            </div>
+          </div>
+         </div>
+
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo5.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">Doble promo</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 35/s</a>
+            </div>
+          </div>
+         </div>
+
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo2.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">La triple promo</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 35/s</a>
+            </div>
+          </div>
+         </div>
+
+         <div class="menuDiv">
+          <div class="card" >
+            <img src="../imagenes/combos/promo8.png" class="card-img-top" alt="imagen-comida">
+            <div class="card-body">
+              <h5 class="card-title">La fitness promo</h5>
+              
+              <a href="https://wa.me/51928842782?text=Hola%20quiero%20hacer%20un%20pedido!" class="btn btn-primary">Ordenar desde= 20/s</a>
+            </div>
+          </div>
+         </div>
+
         </section>
+      </main>
 
-    </main>
-
+   
         <br>
 
     <footer id="piePagina">
@@ -139,7 +170,7 @@
                 <img src="../imagenes/fondos/1x/Mesa de trabajo 1.png" class="what" alt="icono">
             </div>
             <div>
-                <img src="../imagenes/fondos/tarjeta-mastercard.png" alt="icono">
+                <img src="../imagenes/fondos/tarjeta-de-credito (3).png" alt="icono">
             </div>
     
             <div>

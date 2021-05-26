@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0; }
@@ -5,73 +6,32 @@
 html {
   background-color: white; }
 
-.header {
-  margin: 0;
-  height: 200px;
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 100%;
-  grid-template-areas: "img nav"; }
-  .header__color {
-    background-color: black;
-    width: 100%;
-    height: 130px; }
-  .header__color img {
-    width: 140px;
-    margin-left: 40px;
-    transition: 5s,  5s;
-    animation-duration: 5s;
-    animation-name: aparecer; }
-  .header__color img:hover {
-    width: 170px; }
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ef8d30; }
 
-#navBar {
-  height: 130px;
+.bg-light {
   background-color: black !important; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white; }
 
 .navbar-toggler {
   background-color: white; }
 
-#navBar .navbar-brand {
-  color: white; }
+.navbar-nav {
+  font-size: 1.4rem;
+  margin-right: 100px; }
 
-#navBar .navbar-nav a {
-  color: white; }
+.ml-auto {
+  margin-left: auto !important; }
 
-.page-link {
-  color: black; }
-
-.pagination .page-item {
-  margin: 200px 0 0 0; }
-
-.sectionco {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  grid-template-areas: "articulo imagen"; }
-  .sectionco__ticle {
-    text-align: center;
-    font-family: 'Sarabun', sans-serif; }
-  .sectionco__parrafo {
-    text-transform: none;
-    line-height: 1.5;
-    word-spacing: 2px;
-    font-size: 200%;
-    color: black;
-    display: inline-flex;
-    letter-spacing: 0.5px; }
-  .sectionco__imagen {
-    width: 70%;
-    height: 80%;
-    animation-duration: 5s;
-    animation-name: aparecer;
-    margin-left: 68px; }
+.img-fluid {
+  margin-right: 40px;
+  height: 100px; }
 
 p {
   text-transform: none;
-  line-height: 1.5;
-  word-spacing: 2px;
-  font-size: 200%;
+  font-size: 150%;
   color: black;
   display: inline-flex; }
 
@@ -87,14 +47,32 @@ p {
   .mainform__set {
     flex-flow: column;
     color: black;
-    font-family: 'Sarabun', sans-serif;
+    font-family: "Sarabun", sans-serif;
     font-size: 200%;
     display: inline-flex;
     margin-top: 20px;
     gap: 10px; }
   .mainform__setdiv {
     justify-content: center;
-    display: flex; }
+    display: flex;
+    text-transform: uppercase; }
+
+input + span {
+  padding-right: 30px; }
+
+input:invalid + span:after {
+  position: absolute;
+  content: '✖';
+  padding-left: 3px;
+  color: #8b0000;
+  font-size: 50%; }
+
+input:valid + span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 3px;
+  color: #009000;
+  font-size: 50%; }
 
 label {
   font-size: 20px; }
@@ -104,129 +82,49 @@ label {
   height: 40%;
   flex-direction: row; }
 
-.menuUnoSection {
+.main {
+  height: 1100px; }
+
+.sectionMain {
   display: grid;
-  height: 1800px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6" "foto7 foto8" "foto9 foto10";
-  max-width: 100%;
-  max-height: 100%;
-  gap: 10px 10px; }
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30% 30%;
+  grid-template-areas: "foto1  foto2 foto3" "foto4  foto5 foto6" "foto7  foto8 foto7";
+  height: auto;
+  width: 100%;
+  gap: 60px;
+  margin: 50px 0 0 0; }
 
-.menuUnoSection img {
-  width: 40%;
-  height: 50%; }
+.sectionMain .menuDiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 320px; }
 
-.menuUnoSection div {
-  text-align: center; }
-
-.menuUnoSection p {
-  display: block;
+.sectionMain .menuDiv .card {
+  box-shadow: 0 0 15px 0;
+  align-items: center;
   font-family: 'Sarabun', sans-serif;
-  font-size: 20px;
-  color: white; }
+  width: 18rem; }
 
-.menuUnoSection div .precio {
-  margin: 20px 0 0 0; }
+.card-title {
+  text-transform: uppercase; }
 
-.menuUnoSection .precio span {
-  background-color: black;
-  border-radius: 5px; }
-
-.menuUnoSection img:hover {
-  background-color: black;
-  border-radius: 15px; }
+.card-img-top {
+  width: 70% !important;
+  height: 200px; }
 
 .setDiv {
   justify-content: center;
-  display: flex; }
-
-main .sectionPromo {
-  display: grid;
-  height: 1200px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "image1 image2 " "image3 image4 " "image5 image6 "  "image7 image8 ";
-  max-width: 100%;
-  max-height: 100%;
-  gap: 10px; }
-
-.sectionPromo div {
-  text-align: center; }
-
-.sectionPromo img {
-  width: 40%;
-  height: 60%; }
-
-.sectionPromo img:hover {
-  background-color: black;
-  border-radius: 15px; }
-
-.sectionPromo p {
-  display: block;
-  font-family: 'Sarabun', sans-serif;
-  font-size: 20px;
-  color: white; }
-
-.sectionPromo div .compe {
-  margin-left: 0;
-  margin-top: 10px; }
-
-.sectionPromo .compe span {
-  background-color: black;
-  border-radius: 5px; }
-
-.mainviimg {
-  width: 100%;
-  height: 1151px; }
-
-.mainviimg__sectione {
-  display: grid;
-  grid-template-columns: 49% 49%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: "image image" "card card";
-  max-width: 100%;
-  max-height: 100%; }
-
-.mainviimg__sectione #carouselExampleControls {
-  width: 100%; }
-
-.mainviimg__divi {
-  width: 50%;
-  align-items: center; }
-
-.mainviimg__img {
-  width: 200px !important;
-  height: 100%;
-  margin: 20px 0 0 50px;
-  text-align: center; }
-
-#carouselExampleSlidesOnly {
-  margin-bottom: 50px;
-  width: 200px; }
-
-.galery {
   display: flex;
-  justify-content: center;
-  height: 50px; }
+  text-transform: uppercase;
+  margin-top: 45px;
+  text-align: center;
+  margin-right: 0;
+  width: 90%; }
 
-.galery__titulo {
-  font-size: 25px;
-  font-family: "Sarabun", sans-serif;
-  margin-left: 50px; }
-
-.carUno {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center; }
-
-.card-title {
-  font-family: "Sarabun", sans-serif;
-  font-size: 30px;
-  width: 100%; }
+.mainPromo {
+  height: 1300px; }
 
 .btn-primary {
   color: white;
@@ -234,13 +132,17 @@ main .sectionPromo {
   border-color: black;
   font-family: "Sarabun", sans-serif; }
 
+.btn-primary:hover {
+  background-color: #ef8d30;
+  border-color: #ef8d30; }
+
 #piePagina {
   display: grid;
-  grid-template-columns: 13% 10%  10% 24% 43%;
+  grid-template-columns: 13% 10%  10% 10% 43%;
   grid-template-rows: 100%;
   grid-template-areas: "icono icono titulo icono icono";
   height: 120px;
-  border: 3px solid #080000;
+  border: 3px solid black;
   align-items: center;
   gap: 15px;
   background-color: black; }
@@ -260,63 +162,188 @@ main .sectionPromo {
 
 #piePagina .folog {
   width: 120px;
-  margin-left: 65%; }
+  margin-left: 85%; }
 
 #piePagina .what {
   width: 38px; }
 
-@media only screen and (max-width: 1050px) {
-  #piePagina .folog {
-    width: 120px;
-    margin-left: 50%; } }
+.titulo__galeria {
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 40px;
+  text-transform: uppercase; }
 
-@media only screen and (max-width: 1040px) {
-  .header__color {
-    background-color: black;
-    margin-left: 0;
-    height: 200px; }
-  #headerCont {
-    height: 250px; }
-  #headerCont:hover {
-    height: 260px;
-    background-color: black; }
-  #navBar {
-    height: 200px;
-    background-color: black !important; }
-  .mainMenuUno {
-    margin: 50px 0 0 0;
-    height: 1800px; }
-  .header__color img {
-    margin: 0 0 0 0;
-    width: 140px; }
-  #piePagina .folog {
-    width: 40%;
-    margin-left: 40%; }
-  .sectionPromo div {
-    margin-top: 20px; } }
+.linea {
+  background: #ef8d30;
+  height: 5px;
+  width: 100%;
+  display: block; }
 
-@media only screen and (max-width: 700px) {
-  .mainviimg {
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 95%;
+  margin: auto;
+  gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+  text-transform: uppercase; }
+
+.galeria a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px #040404; }
+
+.galeria a:hover img {
+  filter: blur(1px);
+  transform: rotate(10deg) scale(1.3); }
+
+.galeria img {
+  width: 100%;
+  vertical-align: top;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s; }
+
+.libre-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #020202b3;
+  transition: transform .03s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0); }
+
+.libre-box img {
+  width: 40vw;
+  height: 50vh; }
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #851919;
+  color: #fff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px; }
+
+.libre-box:target {
+  transform: scale(1); }
+
+.next {
+  display: block;
+  background: #851919;
+  color: #fff;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  text-align: center; }
+
+.next img {
+  width: 20px;
+  height: 20px; }
+
+.bodyMain {
+  background: black; }
+
+.indexMain {
+  width: 100vw;
+  height: 100vh; }
+
+.indexMain .index {
+  display: grid;
+  grid-template: repeat(10, 1fr)/repeat(10, 1fr);
+  height: 100vh; }
+
+.indexDiv {
+  grid-column: 1 / 11;
+  grid-row: 1 / 10; }
+
+.indexMain img {
+  width: 100%;
+  height: 100vh; }
+
+.indexButton {
+  grid-column: 1 / 6;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row: 1 / 4; }
+
+#buttonIndex {
+  color: white;
+  background-color: #ef8d30;
+  border-color: #ef8d30; }
+
+#buttonIndex:hover {
+  background-color: #ff0000;
+  border-color: #fa0000; }
+
+.titulo {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  text-align: center;
+  align-items: center;
+  display: grid; }
+
+.tituloIndex {
+  font-family: 'National2Condensed-Bold';
+  font-size: 2.6rem;
+  color: #ef8d30;
+  text-transform: uppercase; }
+
+.tituloTi {
+  grid-column: 6 / 10;
+  grid-row: 2 / 3;
+  text-align: center;
+  align-items: center;
+  display: grid; }
+
+.tituloTo {
+  font-family: 'National2Condensed-Bold';
+  font-size: 2.3rem;
+  color: #ef8d30;
+  text-transform: uppercase; }
+
+@media only screen and (max-width: 1200px) {
+  .sectionMain {
+    grid-template-columns: 42% 42%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "foto1  foto2" "foto3  foto4" "foto5  foto6" "foto7  foto8"; }
+  .main {
+    height: 1700px; }
+  .mainPromo {
+    height: 1300px; } }
+
+@media only screen and (max-width: 800px) {
+  .main {
+    height: 1500px; }
+  .mainPromo {
+    height: 1700px; }
+  #piePagina .folog {
+    margin-left: 50%; }
+  .sectionMain .menuDiv .card {
+    width: 15rem; }
+  .sectionMain .menuDiv {
+    height: 300px; }
+  .card-img-top {
+    width: 65% !important;
+    height: 180px; }
+  .setDiv {
     width: 100%;
-    height: 100%; }
-  .mainviimg__sectione {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 12% 12% 38% 33%;
-    grid-template-areas: "image" "image" "card" "card";
-    max-width: 100%;
-    max-height: 100%; }
-  .card {
-    border: none; }
-  .galery {
-    display: flex;
-    justify-content: center;
-    height: 50px; }
-  .galery__titulo {
-    font-size: 25px;
-    font-family: "Sarabun", sans-serif;
-    margin-left: 0;
-    gap: 10px; }
+    margin-right: 0; }
   .carUno {
     width: 100%;
     height: 100%;
@@ -324,10 +351,6 @@ main .sectionPromo {
     justify-content: center;
     text-align: center;
     gap: 10px; }
-  .card-title {
-    font-family: "Sarabun", sans-serif;
-    font-size: 30px;
-    width: 100%; }
   .btn-primary {
     color: #fff;
     background-color: black;
@@ -338,95 +361,74 @@ main .sectionPromo {
   .form-control {
     width: 150%; } }
 
+#buttonIndex {
+  color: white;
+  background-color: #ef8d30;
+  border-color: #ef8d30; }
+
+#buttonIndex:hover {
+  background-color: #ff0000;
+  border-color: #fa0000; }
+
+.tituloIndex {
+  font-size: 2.1rem; }
+
+.tituloTo {
+  font-size: 1.8rem; }
+
+@media only screen and (max-width: 600px) {
+  .sectionMain {
+    grid-template-columns: 100%;
+    grid-template-rows: 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8"; }
+  .main {
+    height: 3100px; }
+    .main .mainPromo {
+      height: 3200px; }
+  .tituloTo {
+    font-size: 1.6rem; } }
+
 @media only screen and (max-width: 480px) {
   body {
     background-color: white;
     line-height: 1; }
-  .header {
-    margin: 0;
-    height: 200px;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 100%;
-    grid-template-areas: "image  Menu";
-    background-color: black; }
+  .setDiv h1 {
+    font-size: 2rem; }
+  .card-title {
+    font-size: 1.18rem; }
   p {
     margin-top: 50px; }
-  .header:hover {
-    height: 200px; }
-  .header__color {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start; }
-  .header__color img {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0;
-    margin-bottom: 30px; }
-  .header__color img:hover {
-    width: 100%; }
   #piePagina {
     display: grid;
     grid-template-columns: 15% 15%  15% 15% 15%;
     grid-template-rows: 100%;
     grid-template-areas: "icono icono titulo icono icono"; }
   #piePagina .face {
-    margin-left: 0;
-    align-items: center; }
+    align-items: center;
+    margin-left: 20px; }
   #piePagina .folog {
     width: 170%;
     margin-left: 0; }
-  .sectionco {
-    height: 900px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50%;
-    grid-template-areas: "articulo" "imagen";
-    gap: 20px;
-    align-items: center; }
-  .sectionco .divi {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .sectionco__imagen {
-    margin-left: 0; }
-  .mainMenuUno {
-    height: 2800px; }
-  .menuUnoSection {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-areas: "foto1"  "foto2" "foto3"  "foto4" "foto5"  "foto6" "foto7"  "foto8" "foto9"  "foto10";
-    margin-top: 50px; }
-  .menuUnoSection img {
-    width: 40%;
-    height: 40%;
-    margin: 0 0 0 0; }
-  .menuUnoSection p {
-    text-align: center;
-    margin: 0 0 0 0;
-    font-family: 'Sarabun', sans-serif;
-    font-size: 16px; }
-  main .sectionPromo {
-    display: grid;
-    height: 1500px;
-    grid-template-columns: 100%;
-    grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11%;
-    grid-template-areas: "image1"  "image2 " "image3"  "image4 " "image5"  "image6 "  "image7"  "image8 "; }
-  .sectionPromo div {
-    margin-top: 20px; }
-  .sectionPromo img {
-    width: 50%;
-    height: 60%;
-    margin: 0 0 0 0; }
-  .sectionPromo p {
-    margin: 0 0 0 0;
-    font-family: 'Sarabun', sans-serif;
-    font-size: 16px; }
-  .sectionPromo div .compe {
-    margin-left: 0; }
+  .inicioMain {
+    height: 600px; }
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .close {
+    top: 20px;
+    right: 20px; }
+  .libre-box img {
+    width: 60vw;
+    height: 20vh; }
+  .next img {
+    width: 20px;
+    height: 20px; }
   .form-control {
-    width: 100%; } }
+    width: 100%; }
+  .tituloIndex {
+    font-family: 'National2Condensed-Bold';
+    font-size: 1.9rem;
+    color: #ef8d30; }
+  .tituloTo {
+    font-size: 1.4rem; }
+  #piePagina div img {
+    margin-left: 20px; } }
